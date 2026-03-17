@@ -5,12 +5,7 @@ import sys
 
 def add(a, b):
     return a + b
-def sub(a, b):
-    return a - b
-def mul(a, b):
-    return a * b
-def div(a, b):
-    return a / b
+
 
 def main():
     if len(sys.argv) != 4:
@@ -30,17 +25,8 @@ def main():
 
     if op == "+":
         result = add(a, b)
-    elif op == "-":
-        result = sub(a, b)
-    elif op == "*":
-        result = mul(a, b)
-    elif op == "/":
-        if b == 0:
-            print("Error: Division by zero")
-            return
-        result = div(a, b)
     else:
-        print("Invalid operator: use +, -, *, or /")
+        print("Invalid operator: use +")
         return
 
     print(result)
